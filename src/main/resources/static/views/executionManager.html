@@ -1,0 +1,80 @@
+<div ng-include="'views/header.html'"></div>
+ <div class="page-header em">
+      <h4>Execution Manager</h4>  
+</div>
+<form name="executionManagerForm" ng-submit="executeTestForSelParams(execution)" role="form" class="pure-form login-form">
+<div class="container">	
+<div class="spinner" ng-show="loading">
+  <div class="loader" ></div>
+</div> 
+<div class='row'>
+  <div class='col-sm-4'>	
+    <label for="Title">Test Application:</label>
+    <select  name="title" ng-model="execution.testNgTestApp" style="width:150px;" class="form-control" ng-required="true">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="pega">Pega</option>
+			<option value="activiti">Activiti</option>
+	</select>	
+	<p ng-show="executionManagerForm.testNgTestApp.$error.required">Test Application Name is required.</p>
+  </div>
+  <div class='col-sm-4'>	
+    <label for="User Name">Test Environment:</label>
+    <select  name="title" ng-model="execution.testNgTestEnvironment" style="width:150px;" class="form-control" ng-required="true">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="dev">Dev</option>
+			<option value="QA">QA</option>
+			<option value="Staging">Staging</option>
+			<option value="Production">Production</option>
+	</select>
+	<p ng-show="executionManagerForm.testNgTestEnvironment.$error.required">Test Application Name is required.</p>
+  </div>
+  </div>
+    <br/>
+    <div class='row'>
+  <div class='col-sm-4'>	
+    <label for="Title">Build Number:</label>
+    <input type="text" ng-value="buildNumber"  ng-disabled="true" name="buildNo" class="form-control"  style="width:150px;" ng-model="execution.testNgBuildNumber">
+  </div>
+  <div class='col-sm-4'>	
+    <label for="User Name">Release Number:</label>
+    <input type="text" ng-value="releaseNumber"  ng-disabled="true" name="releaseNo" class="form-control"  style="width:150px;" ng-model="execution.testNgReleaseNumber">
+  </div>
+  </div>
+  <br/>
+  <div class='row'>
+  <div class='col-sm-4'>	
+    <label for="Title">User Requested:</label>
+     <input type="text" ng-value="userLoggedIn"  ng-disabled="true" name="buildNo" class="form-control"  style="width:150px;" ng-model="execution.testNgUserName">
+  </div>
+  <div class='col-sm-4'>	
+    <label for="User Name">Execution Type:</label>
+    <select  name="title" ng-model="execution.testNgExecutionType" style="width:150px;" class="form-control">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="local">Local</option>
+			<option value="grid">Grid</option>
+			<option value="cloud">Cloud</option>
+	</select>
+  </div>
+  </div>
+  <br/>
+  <div class='row'>  
+  <div class='col-sm-4'>	
+    <label for="User Name">Test Browser:</label>
+    <select  name="title" ng-model="execution.testNgTestBrowser" style="width:150px;" class="form-control">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="Chrome">Chrome</option>
+			<option value="firefox">Firefox</option>
+			<option value="IE">Internet Explorer</option>
+	</select>
+  </div>
+  </div>
+  <br/>
+    <button ng-disabled="isDisabled" ng-model="isDisabled" class="btn btn-primary">
+      <span class="glyphicon glyphicon glyphicon-hand-right"></span> 
+        Next
+    </button>
+    <button ng-click="cancel()" class="btn btn-primary">
+        Cancel
+    </button>
+ </div>
+ </form>

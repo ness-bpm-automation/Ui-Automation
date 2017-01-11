@@ -1,0 +1,83 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title></title>
+    <meta name="fragment" content="!" />
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/font.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/pure/pure.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/pure/grids-responsive.css">
+    <link rel="stylesheet" type="text/css" href="css/pure-theme.css">
+    <link rel="stylesheet" type="text/css" href="css/automation-tracker.css">
+    <link href="//netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css" rel="stylesheet"> 
+    <!-- endbuild -->
+</head>
+<body ng-app="mswFrontendApp" class="pure-skin-theme" id="loginApp">   
+    <div ng-controller="MainCtrl">
+        <div ng-view=""></div>
+    </div>
+
+<!-- build:js(.) scripts/oldieshim.js -->
+<!--[if lt IE 9]>
+<script src="bower_components/es5-shim/es5-shim.js"></script>
+<script src="bower_components/json3/lib/json3.js"></script>
+<![endif]-->
+<!-- endbuild -->
+
+<!-- build:js(.) scripts/vendor.js -->
+<!-- bower:js -->
+<!-- <script src="bower_components/angular/angular.js"></script>
+<script src="bower_components/angular-resource/angular-resource.js"></script>
+<script src="bower_components/angular-cookies/angular-cookies.js"></script>
+<script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+<script src="bower_components/angular-animate/angular-animate.js"></script>
+<script src="bower_components/angular-touch/angular-touch.js"></script>
+<script src="bower_components/angular-route/angular-route.js"></script> -->
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-resource.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.18/angular-route.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-animate.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-touch.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-sanitize.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular-cookies.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script src="//angular-ui.github.io/bootstrap/ui-bootstrap-tpls-0.14.2.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<script src="scripts/angularjs-dropdown-multiselect.js"> </script>
+<script src="scripts/lodash.js"></script>
+
+<!-- endbower -->
+<!-- endbuild -->
+
+<!-- build:js({.tmp,app}) scripts/scripts.js -->
+<script src="scripts/app.js"></script>
+
+<script src="scripts/controllers/authService.js"></script>
+<script src="scripts/controllers/loginController.js"></script>
+
+<script src="scripts/controllers/mainController.js"></script>
+<script src="scripts/controllers/menuController.js"></script>
+<script src="scripts/controllers/homePageController.js"></script>
+<script src="scripts/controllers/usersController.js"></script>
+<script src="scripts/controllers/configManagerCtrl.js"></script>
+<script src="scripts/controllers/configManagerSuccessCtrl.js"></script>
+<script src="scripts/controllers/restApiManagerCtrl.js"></script>
+<script src="scripts/controllers/restApiManagerSuccessCtrl.js"></script>
+<script src="scripts/controllers/executionManagerMainCtrl.js"></script>
+<script src="scripts/controllers/executionManagerCtrl.js"></script>
+<script src="scripts/controllers/executionManagerLaunchCtrl.js"></script>
+<script src="scripts/controllers/executionManagerSuccessCtrl.js"></script>
+<script src="scripts/controllers/jenkinsJobExecManagerSuccessCtrl.js"></script>
+<script src="scripts/controllers/toolsManagerCtrl.js"></script>
+<script src="scripts/controllers/testNgManagerCtrl.js"></script>
+<script src="scripts/controllers/generateTestngForSelParamsCtrl.js"></script>
+<script src="scripts/controllers/reportsManagerCtrl.js"></script>
+<script src="scripts/controllers/resultsManagerCtrl.js"></script>
+
+
+<!-- endbuild -->
+</body>
+</html>

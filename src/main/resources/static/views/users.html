@@ -1,0 +1,187 @@
+<div ng-include="'views/header.html'"></div>
+<html lang="en">
+<head>
+</head>
+ <div class="container">
+   <div class="page-header" style="background-color: #FAF0E6;">
+			<h4>User Admin</h4>			
+   </div>	
+ <table class="table table-bordered table-hover table-condensed">
+ 			<tr style="font-weight: bold">
+ 							<td style="width: 10%">First Name</td>
+ 							<td style="width: 15%">Last Name</td>
+							<td style="width: 10%">User Name</td>
+							<td style="width: 10%">Email</td>
+							<td style="width: 10%">Designation</td>
+							<td style="width: 10%">Permissions</td>
+							<td style="width: 10%"></td>
+							<td style="width: 10%"></td>
+			</tr>
+    <tr ng-repeat="contact in contacts" >
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+        <td>{{ contact.username }}</td>
+        <td>{{ contact.userEmail }}</td>
+        <td>{{ contact.designation }}</td>
+        <td>{{ contact.permissions }}</td>
+        <td> 
+          <button class="btn btn-info" type="button" title="Delete" ng-click="edit('{{contact.id}}')">
+             	 <span class="glyphicon glyphicon-pencil"></span>
+           </button>        
+        </td>
+        <td>           
+            <button class="btn btn-danger" type="button" title="Delete" ng-click="delete('{{contact.id}}')">
+             	 <span class="glyphicon glyphicon-trash"></span>
+           </button>
+        </td>
+    </tr>
+</table>
+<br>
+<button ng-click="newContact()" class="btn btn-success">
+<span class="glyphicon glyphicon-plus"></span> 
+    Add New User
+</button>
+<br/>
+<div class="newContact" ng-show="showNewContact">
+<form name="userRegForm" ng-submit="addUser(newuser)">
+ <div class="page-header" style="background-color: #FAF0E6;">
+			<h4>User Registration</h4>			
+ </div>	
+      <hr>
+<div class='row'>
+  <div class='col-sm-4'>	
+    <label for="Title">Title:</label>
+    <select  name="title" ng-model="newuser.salutation" style="width:150px;" class="form-control">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="mr">Mr</option>
+			<option value="mrs">Mrs</option>
+	</select>
+  </div>
+  <div class='col-sm-4'>	
+    <label for="User Name">User Name:</label>
+    <input type="text" class="form-control"  style="width:150px;" name="userName" ng-model="newuser.username" ng-required="true">
+  </div>
+  </div>
+    <br/>
+    <div class='row'>	
+   	 <div class='col-sm-4'>	
+    	<label for="First Name">First Name:</label>
+    	<input type="text" class="form-control"  style="width:150px;" name="userName" ng-model="newuser.firstName" ng-required="true">
+    </div>
+    <div class='col-sm-4'>	
+    	<label for="Last Name">Last Name:</label>
+    	<input type="text" class="form-control"  style="width:150px;" name="userName" ng-model="newuser.lastName" ng-required="true">
+    </div>
+   </div>
+    <br/>
+    <div class='row'>
+    	<div class='col-sm-4'>	
+     		<label for="email">Email:</label>
+    		<input type="text" name="email" class="form-control"  style="width:150px;" ng-model="newuser.userEmail" ng-required="true">
+    	</div>
+        <div class='col-sm-4'>	
+    		<label for="password">Password:</label>
+    		<input type="text" name="passwd" class="form-control"  style="width:150px;" ng-model="newuser.passwd" ng-required="true">
+   		 </div>
+   	</div>
+    <br/>
+    <div class='row'>
+   	 <div class='col-sm-4'>	
+     	<label for="permission">Permission:</label>
+    	<div ng-dropdown-multiselect="" options="userPermissondata" selected-model="userPermissonmodel" checkboxes="true" extra-settings="userPermissonsettings" ></div>
+     </div>
+     <div class='col-sm-4'>	
+     	<label for="permission">Location:</label>
+    	<select  name="location" ng-model="newuser.location" style="width:150px;" class="form-control">
+			<option value="" selected="selected">-- Please Select --</option>
+			<option value="AL">Alabama</option>
+			<option value="AK">Alaska</option>
+			<option value="AZ">Arizona</option>
+			<option value="AR">Arkansas</option>
+			<option value="CA">California</option>
+			<option value="CO">Colorado</option>
+			<option value="CT">Connecticut</option>
+			<option value="DE">Delaware</option>
+			<option value="DC">District Of Columbia</option>
+			<option value="FL">Florida</option>
+			<option value="GA">Georgia</option>
+			<option value="HI">Hawaii</option>
+			<option value="ID">Idaho</option>
+			<option value="IL">Illinois</option>
+			<option value="IN">Indiana</option>
+			<option value="IA">Iowa</option>
+			<option value="KS">Kansas</option>
+			<option value="KY">Kentucky</option>
+			<option value="LA">Louisiana</option>
+			<option value="ME">Maine</option>
+			<option value="MD">Maryland</option>
+			<option value="MA">Massachusetts</option>
+			<option value="MI">Michigan</option>
+			<option value="MN">Minnesota</option>
+			<option value="MS">Mississippi</option>
+			<option value="MO">Missouri</option>
+			<option value="MT">Montana</option>
+			<option value="NE">Nebraska</option>
+			<option value="NV">Nevada</option>
+			<option value="NH">New Hampshire</option>
+			<option value="NJ">New Jersey</option>
+			<option value="NM">New Mexico</option>
+			<option value="NY">New York</option>
+			<option value="NC">North Carolina</option>
+			<option value="ND">North Dakota</option>
+			<option value="OH">Ohio</option>
+			<option value="OK">Oklahoma</option>
+			<option value="OR">Oregon</option>
+			<option value="PA">Pennsylvania</option>
+			<option value="RI">Rhode Island</option>
+			<option value="SC">South Carolina</option>
+			<option value="SD">South Dakota</option>
+			<option value="TN">Tennessee</option>
+			<option value="TX">Texas</option>
+			<option value="UT">Utah</option>
+			<option value="VT">Vermont</option>
+			<option value="VA">Virginia</option>
+			<option value="WA">Washington</option>
+			<option value="WV">West Virginia</option>
+			<option value="WI">Wisconsin</option>
+			<option value="WY">Wyoming</option>
+		</select>
+     </div>
+   </div>
+   <br/>
+   <div class='row'>
+   	 <div class='col-sm-4'>	
+    	<label for="Designation">Designation:</label>
+    	<input type="text" class="form-control"  style="width:150px;" name="designation" ng-model="newuser.designation">
+    </div>
+    <div class='col-sm-5'>	
+    	<label for="Last Name">Upload Image:</label>    	
+    	<!-- <input type="file" name="file"
+           onchange="angular.element(this).scope().setFile(this)">
+   				 {{theFile.name}} -->
+   				 
+   		 <input type="file" name="file" ng-required="true" ng-model="newuser.userImage" accept="image/x-png"
+                onchange="angular.element(this).scope().setFile(this)">
+             
+   			<!-- <img ng-src="{{imageDispay.dataUrl}}" />  -->
+   			
+   			<!-- <img ng-src="data:image/png;base64,{{imageDispay.dataUrl}}"/> -->
+   			    	
+    	 <!-- <input ng-model="newuser.userImage" type="file" class="form-control input-lg" accept="image/*" onchange="angular.element(this).scope().uploadedFile(this)" style="width:400px" >
+	 	 <input type="submit" id="submit" value="Submit" />
+	  		<br/>
+	  	<!-- <input type="file" class="form-control"  name="userImage" ng-model="newuser.userImage" multiple 
+ 				onchange="angular.element(this).scope().uploadedFile(this)" />-->		 
+    </div>
+   </div>
+    <br>
+    <button class="btn btn-primary">      
+        Save
+    </button>
+    <button ng-click="cancel()" class="btn btn-primary">
+        Cancel
+    </button>
+    </form>
+</div>
+</div>
+</html>

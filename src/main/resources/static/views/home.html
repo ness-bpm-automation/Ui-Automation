@@ -1,0 +1,52 @@
+<div ng-include="'views/header.html'"></div>
+    <br/>
+  <div class="home-container">
+<!-- 	<span ng-if="userModuleDisabled">
+	 <a class="pure-menu-heading">
+			<img alt="useradmin" ng-src="/images/userAdmin.jpg" />
+	</a>
+	</span> 
+	<span ng-if="!userModuleDisabled"> 
+	<a	class="pure-menu-heading" href=""> 
+		<img alt="useradmin" ng-src="/images/userAdmin.jpg" ng-click="userAdmin()" />
+	</a>
+	</span>  -->
+    <h2 class="main-header">Welcome to NessQ</h2>
+    <ul class="flex-container">
+    <li class="flex-item right bottom">
+    	<a ng-show="!userModuleDisabled" class="pure-menu-heading" href="#/userAdmin">
+                    <img alt="useradmin" ng-src="/images/userlogo.png" ng-click="userAdmin()"/>
+                    <h3 class="sub-header">USER ADMIN</h3>
+         </a>
+    </li>
+    <li class="flex-item right bottom">
+	<a class="pure-menu-heading" href="#/toolsmanager">
+                <img alt="toolsAdmin" ng-src="/images/Toolsnew1.png" ng-click="toolsAdmin()"/>
+                <h3 class="sub-header">TOOLS</h3>
+    </a>
+     </li>
+     <li class="flex-item bottom">
+     <a class="pure-menu-heading" href="#/configmanager">
+                <img alt="configAdmin" ng-src="/images/conf.png" ng-click="configAdmin()"/>
+                <h3 class="sub-header">CONGIGURATION MANAGER</h3>
+     </a>
+     </li>
+     <li class="flex-item right bottom">
+     <a class="pure-menu-heading" href="#/reportsmanager">
+     			<img alt="reporAdmin" ng-src="/images/NewResults.png" ng-click="reportsAdmin()"/>
+                <h3 class="sub-header">REPORTS</h3>           
+     </a>
+     </li>
+     <li class="flex-item right bottom">
+     <a class="pure-menu-heading" href="#/executionResults">
+                <img alt="resultsAdmin" ng-src="/images/results1.png" ng-click="executeResults()"/>
+                <h3 class="sub-header">RESULTS</h3>
+     </a>
+    </li>
+    <li class="flex-item bottom">
+     <a class="pure-menu-heading" href="#/executionmanager">
+                <img alt="executionAdmin" ng-src="/images/Manager2.png" ng-click="executionAdmin()"/>
+                <h3 class="sub-header">EXECUTION MANAGER</h3>
+     </a>
+     </li>
+   </div>

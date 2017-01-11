@@ -1,0 +1,49 @@
+<form class="form-horizontal" role="form" > 
+  <div class="modal-header">
+ 	 <button type="button" class="close" data-dismiss="modal" aria-label="Close" ng-click="cancel()">
+          <span aria-hidden="true">&times;</span>
+ 	</button>
+     <h3 class="modal-title">Edit User</h3>   
+  </div>
+  <div class="modal-body">
+  <div class="form-group">
+    <label for="FirstName" class="col-sm-3 control-label">First Name:</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="Name" placeholder="First Name" name="firstName" ng-model="selectedUser.firstName">
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="LastName" class="col-sm-3 control-label">Last Name:</label>
+    <div class="col-sm-5">
+		<input class="form-control" type="text"  id="lastName" name="lastName" ng-model="selectedUser.lastName">
+    </div>
+  </div>
+ <div class="form-group">
+    <label for="UserEmail" class="col-sm-3 control-label">Email:</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="UserEmail" name="email" ng-model="selectedUser.userEmail">
+    </div>
+  </div>
+	<div class="form-group">
+    <label for="UserDesg" class="col-sm-3 control-label">Designation:</label>
+    <div class="col-sm-5">
+      <input type="text" class="form-control" id="UserDesg"  ng-model="selectedUser.designation">
+    </div>
+  </div> 
+   <div class="form-group">
+    <label for="userPermission" class="col-sm-3 control-label">User Permission:</label>
+   <div class="col-sm-5">
+   	<div ng-dropdown-multiselect="" options="userPermissondata" selected-model="userPermissonmodel" checkboxes="true" extra-settings="userPermissonsettings" ></div>
+   </div>
+  </div>
+  <div class="form-group">
+    <label for="userImg" class="col-sm-3 control-label">User Image:</label>
+   <div class="col-sm-5">
+   <img ng-src="data:image/png;base64,{{selectedUser.userImage}}" id="photo-id"/>
+    </div>
+  </div>
+  </form>
+  <div class="modal-footer">
+       <button class="btn btn-warning" type="button" ng-click="cancel()">Cancel</button>
+       <button class="btn btn-primary" type="submit" ng-click="save()" data-dismiss="modal">Update</button>
+  </div>

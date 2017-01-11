@@ -1,0 +1,25 @@
+<div ng-include="'views/header.html'"></div>
+ <div class="page-header em">
+      <h4>Reports Manager</h4>      
+ </div>
+<div class="container">
+	 <table class="table table-bordered table-hover table-condensed">
+ 			<tr style="font-weight: bold">
+ 							<td style="width: 10%">Report Name</td>
+ 							<td style="width: 15%">Report Link</td>
+							<td style="width: 10%">Executed Date</td>
+			</tr>
+    <tr>
+        <td>Pega Automation Report</td>
+        <td><a href="file:///{{ pegaTestLocation }}/{{ automationReportFileName }}" target="_blank">Automation Test Report</a></td>
+        <td>{{ pegaReportDate }}</td>        
+    </tr>
+    <tr>
+        <td>Rest API Automation Report</td>
+        <td><a href="file:///{{ restTestLocation }}/{{ restApiReportFileName }}" target="_blank">Rest API Automation Report</td>
+        <td>{{ restApiReportDate }}</td>        
+    </tr>
+</table>
+</div>
+
+

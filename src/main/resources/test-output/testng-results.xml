@@ -1,0 +1,484 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" total="7" passed="7">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Default suite" duration-ms="46616" started-at="2016-12-07T14:58:27Z" finished-at="2016-12-07T14:59:14Z">
+    <groups>
+      <group name="functest">
+        <method signature="LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" class="com.nessq.pega.login.LoginTest9"/>
+      </group> <!-- functest -->
+      <group name="logintest">
+        <method signature="LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" class="com.nessq.pega.login.LoginTest9"/>
+      </group> <!-- logintest -->
+    </groups>
+    <test name="Default test" duration-ms="46616" started-at="2016-12-07T14:58:27Z" finished-at="2016-12-07T14:59:14Z">
+      <class name="com.nessq.pega.login.LoginTest9">
+        <test-method status="PASS" signature="springTestContextBeforeTestClass()[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestClass" is-config="true" duration-ms="40" started-at="2016-12-07T09:58:27Z" finished-at="2016-12-07T09:58:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestClass -->
+        <test-method status="PASS" signature="springTestContextPrepareTestInstance()[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextPrepareTestInstance" is-config="true" duration-ms="7257" started-at="2016-12-07T09:58:27Z" depends-on-methods="org.springframework.test.context.testng.AbstractTestNGSpringContextTests.springTestContextBeforeTestClass" finished-at="2016-12-07T09:58:35Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextPrepareTestInstance -->
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeClass" is-config="true" duration-ms="9764" started-at="2016-12-07T09:58:35Z" finished-at="2016-12-07T09:58:44Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:44Z" finished-at="2016-12-07T09:58:44Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="1656" started-at="2016-12-07T09:58:44Z" finished-at="2016-12-07T09:58:46Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithInvalidCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithInvalidCredentials" duration-ms="737" started-at="2016-12-07T09:58:46Z" data-provider="invalidCredentials" finished-at="2016-12-07T09:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[zhDvBAGhpm]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCredentials -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="1" started-at="2016-12-07T09:58:47Z" finished-at="2016-12-07T09:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:47Z" finished-at="2016-12-07T09:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidCredentials status=SUCCESS method=LoginTest9.loginWithInvalidCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:47Z" finished-at="2016-12-07T09:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="281" started-at="2016-12-07T09:58:47Z" finished-at="2016-12-07T09:58:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithInvalidCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithInvalidCredentials" duration-ms="555" started-at="2016-12-07T09:58:47Z" data-provider="invalidCredentials" finished-at="2016-12-07T09:58:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Negotiator]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[WPrBDcLGMY]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithInvalidCredentials -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:48Z" finished-at="2016-12-07T09:58:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithInvalidCredentials(java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:48Z" finished-at="2016-12-07T09:58:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithInvalidCredentials status=SUCCESS method=LoginTest9.loginWithInvalidCredentials(java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:48Z" finished-at="2016-12-07T09:58:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="280" started-at="2016-12-07T09:58:48Z" finished-at="2016-12-07T09:58:48Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" duration-ms="5147" started-at="2016-12-07T09:58:48Z" data-provider="validCredentials" finished-at="2016-12-07T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Negotiator]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Negotiator]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:53Z" finished-at="2016-12-07T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:53Z" finished-at="2016-12-07T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:53Z" finished-at="2016-12-07T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="263" started-at="2016-12-07T09:58:53Z" finished-at="2016-12-07T09:58:53Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" duration-ms="4902" started-at="2016-12-07T09:58:53Z" data-provider="validCredentials" finished-at="2016-12-07T09:58:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[SalesManager]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[Sales manager]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:58Z" finished-at="2016-12-07T09:58:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="266" started-at="2016-12-07T09:58:58Z" finished-at="2016-12-07T09:58:59Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:58Z" finished-at="2016-12-07T09:58:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:58:58Z" finished-at="2016-12-07T09:58:58Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" duration-ms="4220" started-at="2016-12-07T09:58:59Z" data-provider="validCredentials" finished-at="2016-12-07T09:59:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dlmdoer]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DLMDOER]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="1" started-at="2016-12-07T09:59:03Z" finished-at="2016-12-07T09:59:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:03Z" finished-at="2016-12-07T09:59:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="294" started-at="2016-12-07T09:59:03Z" finished-at="2016-12-07T09:59:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:03Z" finished-at="2016-12-07T09:59:03Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" duration-ms="4118" started-at="2016-12-07T09:59:03Z" data-provider="validCredentials" finished-at="2016-12-07T09:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Systemuser]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[SystemUser]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:07Z" finished-at="2016-12-07T09:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:07Z" finished-at="2016-12-07T09:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextBeforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextBeforeTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:07Z" finished-at="2016-12-07T09:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextBeforeTestMethod -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="beforeMethod" is-config="true" duration-ms="288" started-at="2016-12-07T09:59:07Z" finished-at="2016-12-07T09:59:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="loginWithValidCredentials" duration-ms="4165" started-at="2016-12-07T09:59:07Z" data-provider="validCredentials" finished-at="2016-12-07T09:59:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Dlmassigner]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[install]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[DLMAssigner]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginWithValidCredentials -->
+        <test-method status="PASS" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterMethod" is-config="true" duration-ms="1" started-at="2016-12-07T09:59:12Z" finished-at="2016-12-07T09:59:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=loginWithValidCredentials status=SUCCESS method=LoginTest9.loginWithValidCredentials(java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="springTestContextAfterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestMethod" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:12Z" finished-at="2016-12-07T09:59:12Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.nessq.pega.login.LoginTest9.loginWithValidCredentials(java.lang.String,java.lang.String,java.lang.String)]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestMethod -->
+        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="afterClass" is-config="true" duration-ms="2329" started-at="2016-12-07T09:59:12Z" finished-at="2016-12-07T09:59:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+        <test-method status="PASS" signature="springTestContextAfterTestClass()[pri:0, instance:com.nessq.pega.login.LoginTest9@11f9e9]" name="springTestContextAfterTestClass" is-config="true" duration-ms="0" started-at="2016-12-07T09:59:14Z" finished-at="2016-12-07T09:59:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- springTestContextAfterTestClass -->
+      </class> <!-- com.nessq.pega.login.LoginTest9 -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
+</testng-results>

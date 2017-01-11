@@ -1,0 +1,24 @@
+<div ng-include="'views/header.html'"></div>
+<div class="container">
+ <div class="page-header" style="background-color: #FAF0E6;">
+			<h4>Config Manager</h4>			
+ </div>	
+ <div class='row'>
+  <div class='col-sm-4'>	
+    <label for="Title">Test Environment URL:</label>
+    <input type="text" name="envURL" class="form-control"  style="width:150px;" ng-model="environmentURL">
+  </div>
+  <div class='col-sm-6'>	
+    <label for="User Name">Global Page Load:</label>
+    <input type="text" name="pageLoad" class="form-control"  style="width:150px;" ng-model="pageLoadTime">Secs
+  </div>
+  </div>
+    <br/> 
+    <button ng-click="launchTestNg()" class="btn btn-primary">
+      <span class="glyphicon glyphicon-pencil"></span> 
+        Update
+    </button>
+    <button ng-click="cancel()" class="btn btn-primary">
+        Cancel
+    </button>
+  </div>

@@ -1,0 +1,53 @@
+<html lang="en">
+<head>
+</head>
+ <nav class="navbar navbar-inverse navbar-static-top">
+     <div class="header-container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar3">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="pure-menu-heading" href="#home">
+                <img class="main-logo" src="/images/NewLogo.png">
+            </a>
+            <span class="header-element page-title">NessQ </span>
+      </div>
+      <div id="navbar3" class="navbar-collapse collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li class="active"><a href="#home">Home</a></li>
+          <!-- <li><a href="#">About</a></li> -->
+          <li><a href="#">Contact</a></li>
+          <li class="dropdown">
+            <a href="javascript:void(0)" class="dropdown-toggle logout" data-toggle="dropdown" role="button" aria-expanded="false" ><img class="user-logo" alt="home" src="/images/User.png"><span class="caret"></span></a></a><span class="glyphicons glyphicons-log-out"></span>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="javascript:void(0)"><span ng-cloak>Welcome {{loginUser.firstName | uppercase}} {{loginUser.lastName  | uppercase}}!</span></a></li>
+<!--               <li><a href="#">Another action</a></li>
+              <li><a href="#">Something else here</a></li> -->
+              <li class="divider"></li>
+              <!-- <li class="dropdown-header">Nav header</li> -->
+              <li><a href="#" ng-click="$event.preventDefault();logOff()">Logout</a></li>
+              <!-- <li><a href="#">One more separated link</a></li> -->
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <!--/.nav-collapse -->
+    </div>
+    <!--/.container-fluid -->
+  </nav>
+        <!-- <div class="pure-u-lg-1-2 pure-u-1 utilities">
+        <div class="header-element">
+        	<span ng-cloak>Welcome {{loginUser.firstName | uppercase}} {{loginUser.lastName	 | uppercase}}</span>
+            <a class="logout" href="#/" ng-click="$event.preventDefault();logOff()"><img class="logo" alt="home" src="/images/User.png"><span class="caret"></span></a></a><span class="glyphicons glyphicons-log-out"></span>
+        </div> -->
+    </div>
+
+<div class="example3">
+ 
+</div>
+
+</html>

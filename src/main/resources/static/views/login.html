@@ -1,0 +1,40 @@
+<header class="page-header pure-g">
+	<div class="pure-u-lg-1-2 pure-u-1">
+		<a class="pure-menu-heading" href="#"> <img class="logo"
+			src="/images/NewLogo.png">
+		</a> <span class="header-element page-title">NessQ	Login</span>
+	</div>
+</header>
+<div ng-show="error" class="alert alert-danger">{{error}}</div>
+<div class="container-fluid blok2">
+<div class="login-container">
+	<form name="form" ng-submit="login(user)" role="form" class="pure-form login-form">
+		<div class="form-field">
+			<fieldset class="pure-group"><br/>
+				<legend><img class="logo2" src="/images/NewLogo4.png">Welcome to NessQ</legend>
+				<div class="form-group">
+					<label for="username">Username:</label> <i class="fa fa-key"></i> 
+					<input	type="text" ng-model='user.username' name="username" id="username"
+						    class="form-control" placeholder="Username" ng-required="true" /> 
+					<!-- <span  ng-show="form.username.$dirty && form.username.$error.required"
+						    class="help-block red">* Username is required</span> -->
+				</div>
+				<br/>
+				<div class="form-group">
+					<label for="password">Password:</label> <i class="fa fa-lock"></i>
+					<input type="password" name="password" ng-model='user.password'
+						id="password" class="form-control" placeholder="Password" ng-required="true" />
+					<!-- <span
+						ng-show="!form.password.$pristine && form.password.$invalid"
+						class="help-block red">* Password is required</span> -->
+				</div>				
+				<p ng-show="loginfailed" class="error">* Authentication
+					failed, Invalid username/password</p>
+				<br> <input type="submit" value="Login" 
+					class="pure-button pure-input-1 pure-button-primary" />
+			</fieldset>
+		</div>
+	</form>
+</div>
+</div>
+<div ng-include="'views/footer.html'"></div>

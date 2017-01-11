@@ -1,0 +1,14 @@
+<div ng-include="'views/header.html'"></div>
+ <div class="page-header em">
+      <h4>Rest API Execution Manager</h4>      
+ </div> 
+<div class="container">
+<div class="execution-rows">
+ <button ng-click="launchRestTest()" ng-disabled="isDisabled" ng-model="isDisabled"class="btn btn-primary">     
+        Launch RestAPI Test
+    </button>
+    <button ng-click="cancel()" class="btn btn-primary">
+        Cancel
+    </button>
+ </div>
+</div>

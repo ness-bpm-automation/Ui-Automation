@@ -1,0 +1,136 @@
+<link href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css" rel="stylesheet">
+<div ng-include="'views/header.html'"></div>
+ <div class="page-header em">
+      <h4>Execution Manager</h4>  
+</div>
+<div class="container">
+ <div class="page-header choose">
+      <h4>Please choose an option below to get the results</h4>
+</div>
+<div class="em-container">
+<div class="spinner" ng-show="loading">
+  <div class="loader" ></div>
+</div>
+<!--  <p> Click <a ng-click="loadTestData()" style="color:red;cursor:pointer;">here</a> to load data.</p>  -->
+<div class='row em-options'>
+  <div>  
+
+
+  <input id="box1" type="checkbox" ng-click="console.log('Clicked here');" ng-model="checkboxModel.value1" ng-disabled="priorityCheck || showByCustomList ||  showByFeatureList"  />
+  <label id="text" ng-class="{discheck: showByCustomList || showByFeatureList || priorityCheck}" for="box1">All</label>
+     <div class="align-next right">
+   <span ng-repeat="priority in priorities">
+       <input id="box{{$index+4}}" type='checkbox' value="{{ priority }}" ng-model="priorityCheck" check-list='checked_priorities' ng-disabled="checkboxModel.value1 || showByFeatureList || showByCustomList" ng-click='addPriority(priority)'> 
+       <label for="box{{$index+4}}" ng-class="{discheck: showByCustomList || showByFeatureList || checkboxModel.value1}" id="priority">{{ priority }}</label><br />    
+   </span>   
+   </div>
+  <input id="box2" type="checkbox" value="byCustomlist" ng-disabled="checkboxModel.value1 || priorityCheck || showByFeatureList" ng-model="showByCustomList"/>
+  <label id="text" ng-class="{discheck: showByFeatureList || checkboxModel.value1 || priorityCheck}" for="box2">Custom List</label>
+  <input id="box3" type="checkbox" value="byFeature" ng-disabled="checkboxModel.value1 || priorityCheck || showByCustomList" ng-model="showByFeatureList" />
+  <label id="text" ng-class="{discheck: showByCustomList || checkboxModel.value1 || priorityCheck}" for="box3">By Feature</label>
+</div>
+  </div>
+  <br/>
+   <div  ng-show="showByCustomList">	
+   <hr/>  
+       <label for="feature">Custom List:</label>
+     <div class="input-group">
+                <input type="text" ng-model="search" class="form-control" placeholder="Search" style="width:300px;">
+     </div>
+     <br/>
+     <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th><input type="checkbox" ng-model="model.allItemsSelected" ng-click="selectAll()"></th>
+                        <th class="testCaseId">TestCase Id </th>
+                        <th class="testCaseGroup">TestCase Group</th>
+                        <th class="testCaseFeature">TestCase Feature</span></th>
+                        <th ng-click="sort('testCaseClass')" class="testCaseClass">TestCase Class
+                        	<span class="glyphicon sort-icon" ng-show="sortKey=='testCaseClass'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>                        
+						</th>
+                        <th ng-click="sort('testCaseMethod')" class="testCaseMethod">TestCase Method
+                           <span class="glyphicon sort-icon" ng-show="sortKey=='testCaseMethod'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>                        
+                         </th>
+                         <th class="testCaseCreatedBy">TestCase CreatedBy</th>
+                         <th class="field5">Action&nbsp;</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in customQueueList|orderBy:sortKey:reverse|filter:search|filter:paginate" ng-class="{selected:item.isChecked}">
+                        <td><input type="checkbox" ng-model="item.isChecked" ng-change="change(item, item.isChecked)" ></td>
+                        <td>{{item.testCaseRunId}}</td>
+                        <td>{{item.testCaseGroup}}</td>
+                        <td>{{item.testCaseFeature}}</td>
+                        <td>{{item.testCaseClass}}</td>
+                        <td>{{item.testCaseMethod}}</td>
+                        <td>{{item.testCaseCreatedBy}}</td>
+                        <td><button class="btn btn-danger" type="button" title="Delete" ng-click="removeQueue($index)">
+             	 				<span class="glyphicon glyphicon-trash"></span>
+           					</button></td>
+                    </tr>
+                </tbody>
+            </table>                          
+            <pagination total-items="totalItems" ng-model="currentPage"
+          				max-size="5" boundary-links="true"
+          				items-per-page="numPerPage" class="pagination-sm">
+        	</pagination>
+    </div> 
+<div  ng-show="showByFeatureList"> 
+       <hr />  
+       <label for="feature">Filter by Feature:</label>
+       <div ng-dropdown-multiselect="" options="executionFeaturedata" selected-model="executionFeaturemodel" checkboxes="true" 
+    	      extra-settings="executionFeaturesettings" ></div> 
+      <br/>
+       <table class="table table-striped table-hover table-bordered">
+                <thead>
+                    <tr>
+                        <th class="testCaseId">TestCase Id </th>
+                        <th class="testCaseGroup">TestCase Group</th>
+                        <th class="testCaseFeature">TestCase Feature</span></th>
+                        <th ng-click="sort('testCaseClass')" class="testCaseClass">TestCase Class
+                        	<span class="glyphicon sort-icon" ng-show="sortKey=='testCaseClass'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>                        
+						</th>
+                        <th ng-click="sort('testCaseMethod')" class="testCaseMethod">TestCase Method
+                           <span class="glyphicon sort-icon" ng-show="sortKey=='testCaseMethod'" ng-class="{'glyphicon-chevron-up':reverse,'glyphicon-chevron-down':!reverse}"></span>                        
+                         </th>
+                        <th class="testCaseCreatedBy">TestCase CreatedBy</th>
+                        <th>Action&nbsp;</th>
+                    </tr>
+                </thead>             
+                <tbody>
+                   <!--  <tr ng-repeat="item in pagedItems[currentPage] | orderBy:sortingOrder:reverse"> -->
+                    <tr ng-repeat="item in customQueueList|orderBy:sortKey:reverse|filter:search|filter:paginate">
+                        <td>{{item.testCaseRunId}}</td>
+                        <td>{{item.testCaseGroup}}</td>
+                        <td>{{item.testCaseFeature}}</td>
+                        <td>{{item.testCaseClass}}</td>
+                        <td>{{item.testCaseMethod}}</td>                        
+                        <td>{{item.testCaseCreatedBy}}</td>
+                        <td><button class="btn btn-danger" type="button" title="Delete" ng-click="removeItem($index)">
+             	 				<span class="glyphicon glyphicon-trash"></span>
+           					</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            <pagination total-items="totalItems" ng-model="currentPage"
+          				max-size="5" boundary-links="true"
+          				items-per-page="numPerPage" class="pagination-sm">
+        	</pagination>
+    </div>       
+ <br/>
+ <!-- <button ng-click="executeTestCase()" class="btn btn-primary" data-ng-disabled="checkQueueLength()"> -->
+ <div class="buttons"> 
+    <button ng-click="executeTestCase()" ng-disabled="isDisabled" ng-model="isDisabled"class="btn btn-primary">
+      <span class="glyphicon glyphicon-new-window"></span> 
+        Launch Through CMD
+    </button>
+    <button ng-click="executeJenkinsJob()" class="btn btn-primary">
+      <span class="glyphicon glyphicon-new-window"></span> 
+        Launch Through Jenkins
+    </button>    
+    <button ng-click="cancel()" class="btn btn-primary">
+        Cancel
+    </button>
+ </div>
+ </div>
+ </div>
